@@ -12,7 +12,7 @@ services:
       # This variable defines where the logs, file storage, monitor data and secret keys are stored.
       - LANGFLOW_CONFIG_DIR=/app/langflow
     volumes:
-      - langflow-data1:/app/langflow
+      - langflow-data-alpha:/app/langflow
 
   postgres:
     image: postgres:16
@@ -21,10 +21,10 @@ services:
       POSTGRES_PASSWORD: langflow
       POSTGRES_DB: langflow
     ports:
-      - "5433:5433"
+      - "5431:5431"
     volumes:
-      - langflow-postgres1:/var/lib/postgresql/data
+      - langflow-postgres-alpha:/var/lib/postgresql/data
 
 volumes:
-  langflow-postgres1:
-  langflow-data1:
+  langflow-postgres-alpha:
+  langflow-data-alpha:
