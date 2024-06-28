@@ -4,7 +4,7 @@ services:
   langflow:
     image: langflowai/langflow:1.0-alpha
     ports:
-      - "7860:7860"
+      - "7861:7861"
     depends_on:
       - postgres
     environment:
@@ -21,7 +21,7 @@ services:
       POSTGRES_PASSWORD: langflow
       POSTGRES_DB: langflow
     ports:
-      - "5432:5432"
+      - "5433:5433"
     volumes:
       - langflow-postgres1:/var/lib/postgresql/data
 
